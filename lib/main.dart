@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Counter and Image Toggle',
+      title: 'counter+ and image toggle',
       theme: ThemeData.light(),
       darkTheme: ThemeData.dark(),
       home: const MyHomePage(),
@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  // Counter display with dynamic text color
+                  // counter++
                   Text(
                     'Counter Value: $_counter',
                     style: Theme.of(context).textTheme.headlineMedium?.copyWith(
@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                         ),
                   ),
                   const SizedBox(height: 40),
-                  // Image with fade transition
+                  // imge FadeTransition
                   FadeTransition(
                     opacity: _animation,
                     child: Image.asset(
@@ -103,23 +103,22 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
                     ),
                   ),
                   const SizedBox(height: 20),
-                  // Toggle image button
                   ElevatedButton(
                     onPressed: _toggleImage,
-                    child: const Text('Toggle Image'),
+                    child: const Text('Toggle image'),
                   ),
                   const SizedBox(height: 20),
-                  // Toggle theme button
+                  // toggle
                   ElevatedButton(
                     onPressed: _toggleTheme,
                     child: Text(
-                      _isLightTheme ? 'Switch to Dark Mode' : 'Switch to Light Mode',
+                      _isLightTheme ? 'Switch to Dark Mode' : 'switch to Light Mode',
                     ),
                   ),
                 ],
               ),
             ),
-            // Increment button with plus sign in bottom-left corner
+            // + button
             Positioned(
               bottom: 16,
               right: 16,
